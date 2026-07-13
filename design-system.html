@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Diseño — Trastes, Lutería de Autor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body class="ds-body">
+
+<div class="grain"></div>
+
+<!-- ============ SIDEBAR NAV ============ -->
+<aside class="ds-sidebar">
+  <div class="ds-brand"><span>Trastes</span></div>
+  <span class="ds-brand-sub">Sistema de Diseño</span>
+
+  <div class="ds-nav-group">
+    <div class="ds-nav-group-title">01 · Fundamentos</div>
+    <a href="#colors">Colores de marca</a>
+    <a href="#gradients">Degradados</a>
+    <a href="#shadows">Sombras</a>
+    <a href="#radius">Radios de borde</a>
+  </div>
+  <div class="ds-nav-group">
+    <div class="ds-nav-group-title">02 · Tipografía</div>
+    <a href="#type-families">Familias tipográficas</a>
+    <a href="#type-headings">Encabezados</a>
+    <a href="#type-body">Cuerpo &amp; etiquetas</a>
+  </div>
+  <div class="ds-nav-group">
+    <div class="ds-nav-group-title">03 · Botones</div>
+    <a href="#btn-solid">Botón sólido</a>
+    <a href="#btn-line">Botón de línea</a>
+    <a href="#btn-icon">Botones circulares</a>
+    <a href="#btn-states">Estados</a>
+  </div>
+  <div class="ds-nav-group">
+    <div class="ds-nav-group-title">04 · Componentes</div>
+    <a href="#comp-nav">Navegación</a>
+    <a href="#comp-cards">Tarjetas</a>
+    <a href="#comp-carousel">Carrusels</a>
+    <a href="#comp-tags">Tags &amp; badges</a>
+    <a href="#comp-forms">Formularios</a>
+    <a href="#comp-accordion">Acordeones</a>
+    <a href="#comp-banner">Banner editorial</a>
+    <a href="#comp-footer">Footer</a>
+  </div>
+  <div class="ds-nav-group">
+    <div class="ds-nav-group-title">05 · Imágenes</div>
+    <a href="#img-ratios">Contenedores &amp; ratios</a>
+    <a href="#img-textures">Texturas de madera</a>
+  </div>
+  <div class="ds-nav-group">
+    <div class="ds-nav-group-title">06 · Layout</div>
+    <a href="#layout-container">Contenedores &amp; grillas</a>
+    <a href="#layout-spacing">Ritmo vertical</a>
+    <a href="#layout-breakpoints">Breakpoints</a>
+  </div>
+</aside>
+
+<!-- ============ MAIN ============ -->
+<main class="ds-main">
+
+  <div class="ds-page-head">
+    <div class="eyebrow">Trastes — Lutería de Autor</div>
+    <h1>Sistema de <em>Diseño</em></h1>
+    <p>Librería visual de referencia extraída directamente del código en producción. Cada color, tipografía, botón y componente aquí mostrado usa las mismas clases CSS del sitio — nada fue rediseñado. Esta página es un catálogo, no una nueva interfaz.</p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 1. BRAND FOUNDATION -->
+  <!-- ============================================================ -->
+  <section class="ds-section" id="colors">
+    <div class="ds-section-num">Sección 01</div>
+    <h2>Fundamentos de marca</h2>
+    <p class="ds-lede">La paleta completa vive en <code>:root</code> como variables CSS. Dos familias conviven: los tonos "walnut/brass" originales del branding, y la "paleta de atmósfera" más cálida que alimenta el degradado continuo de fondo del sitio.</p>
+
+    <div class="ds-sub">
+      <h3>Paleta walnut / brass (marca)</h3>
+      <p>Colores primarios de marca — fondo oscuro, texto crema y acento dorado (brass).</p>
+    </div>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#1A120D"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Walnut Dark</span><span class="ds-swatch-var">--walnut-dark</span><span class="ds-swatch-hex">#1A120D</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#120B07"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Walnut Deep</span><span class="ds-swatch-var">--walnut-deep</span><span class="ds-swatch-hex">#120B07</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#241811"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Walnut Mid</span><span class="ds-swatch-var">--walnut-mid</span><span class="ds-swatch-hex">#241811</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#2A1D14"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Walnut Card</span><span class="ds-swatch-var">--walnut-card</span><span class="ds-swatch-hex">#2A1D14</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#F2E4CC"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Cream (texto principal)</span><span class="ds-swatch-var">--cream</span><span class="ds-swatch-hex">#F2E4CC</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#C9B896"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Cream Dim</span><span class="ds-swatch-var">--cream-dim</span><span class="ds-swatch-hex">#C9B896</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#8A7A61"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Cream Muted</span><span class="ds-swatch-var">--cream-muted</span><span class="ds-swatch-hex">#8A7A61</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#C9A15C"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Brass (acento primario)</span><span class="ds-swatch-var">--brass</span><span class="ds-swatch-hex">#C9A15C</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#E0BE7E"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Brass Bright</span><span class="ds-swatch-var">--brass-bright</span><span class="ds-swatch-hex">#E0BE7E</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#6E5A38"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Brass Dim</span><span class="ds-swatch-var">--brass-dim</span><span class="ds-swatch-hex">#6E5A38</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#5E7B7E"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Teal (acento raro)</span><span class="ds-swatch-var">--teal</span><span class="ds-swatch-hex">#5E7B7E</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:rgba(242,228,204,0.26)"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Blueprint (grid)</span><span class="ds-swatch-var">--blueprint-strong</span><span class="ds-swatch-hex">rgba(242,228,204,.26)</span></div></div>
+    </div>
+
+    <div class="ds-sub">
+      <h3>Paleta de atmósfera (fondo &amp; luz)</h3>
+      <p>Alimenta el degradado continuo de fondo (<code>--bg-progression</code>) y toda superficie de vidrio/glow del sitio.</p>
+    </div>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#1B120D"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Dark Chocolate</span><span class="ds-swatch-var">--dark-chocolate</span><span class="ds-swatch-hex">#1B120D</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#2A1B13"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Coffee Brown</span><span class="ds-swatch-var">--coffee-brown</span><span class="ds-swatch-hex">#2A1B13</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#4A3023"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Medium Brown</span><span class="ds-swatch-var">--medium-brown</span><span class="ds-swatch-hex">#4A3023</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#6A4631"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Leather Brown</span><span class="ds-swatch-var">--leather-brown</span><span class="ds-swatch-hex">#6A4631</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#C9793B"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Amber Light</span><span class="ds-swatch-var">--amber-light</span><span class="ds-swatch-hex">#C9793B</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#E0A15C"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Amber Glow</span><span class="ds-swatch-var">--amber-glow</span><span class="ds-swatch-hex">#E0A15C</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#A85A2A"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Copper</span><span class="ds-swatch-var">--copper</span><span class="ds-swatch-hex">#A85A2A</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#E8D7BE"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Warm Sand</span><span class="ds-swatch-var">--warm-sand</span><span class="ds-swatch-hex">#E8D7BE</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#FFF4E0"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Warm White</span><span class="ds-swatch-var">--warm-white</span><span class="ds-swatch-hex">#FFF4E0</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#FFEBBA"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Secondary Detail</span><span class="ds-swatch-var">--secondary-detail</span><span class="ds-swatch-hex">#FFEBBA</span></div></div>
+    </div>
+
+    <div class="ds-sub">
+      <h3>Texto sobre fondo claro (sección Contacto)</h3>
+      <p>Cuando el fondo llega a su punto más claro (warm sand), estas variables reemplazan a <code>--cream</code>/<code>--cream-dim</code>/<code>--cream-muted</code> para mantener legibilidad.</p>
+    </div>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#2A1B13"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Text on Light</span><span class="ds-swatch-var">--text-on-light</span><span class="ds-swatch-hex">#2A1B13</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#4A3023"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Text on Light Dim</span><span class="ds-swatch-var">--text-on-light-dim</span><span class="ds-swatch-hex">#4A3023</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color" style="background:#6A4631"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Text on Light Muted</span><span class="ds-swatch-var">--text-on-light-muted</span><span class="ds-swatch-hex">#6A4631</span></div></div>
+    </div>
+  </section>
+
+  <!-- GRADIENTS / SHADOWS / RADIUS -->
+  <section class="ds-section" id="gradients">
+    <div class="ds-section-num">Fundamentos</div>
+    <h2>Degradados, sombras y radios</h2>
+
+    <div class="ds-sub"><h3>Fondo de página (progresión continua)</h3><p>Un único degradado corre por todo el documento — de oscuro (hero) a claro (contacto) y vuelve a oscurecer en el footer.</p></div>
+    <div class="ds-strip-grid">
+      <div class="ds-strip">
+        <div class="ds-strip-preview" style="background:linear-gradient(180deg,#1B120D,#2A1B13,#4A3023,#6A4631,#E8D7BE,#241710);"></div>
+        <div class="ds-strip-meta"><span class="ds-strip-name">Body background progression</span><span class="ds-strip-code">--bg-progression</span></div>
+      </div>
+      <div class="ds-strip">
+        <div class="ds-strip-preview" style="background:linear-gradient(155deg, rgba(58,38,24,0.9), rgba(30,19,12,0.85));"></div>
+        <div class="ds-strip-meta"><span class="ds-strip-name">Glass card gradient</span><span class="ds-strip-code">linear-gradient(155deg, rgba(58,38,24,.62), rgba(30,19,12,.5))</span></div>
+      </div>
+      <div class="ds-strip">
+        <div class="ds-strip-preview" style="background:linear-gradient(160deg, #261911 0%, #543624 55%, #A85A2A 100%);"></div>
+        <div class="ds-strip-meta"><span class="ds-strip-name">Testimonial card gradient</span><span class="ds-strip-code">linear-gradient(160deg, rgba(38,25,17,.94), rgba(84,54,36,.62), rgba(168,92,44,.24))</span></div>
+      </div>
+      <div class="ds-strip">
+        <div class="ds-strip-preview" style="background:radial-gradient(circle, rgba(201,121,59,0.5) 0%, rgba(201,161,92,0.2) 46%, transparent 76%); background-color:#241710;"></div>
+        <div class="ds-strip-meta"><span class="ds-strip-name">Brass glow (active states)</span><span class="ds-strip-code">radial-gradient(ellipse at center, rgba(201,161,92,.32) 0%, transparent 76%)</span></div>
+      </div>
+    </div>
+
+    <div class="ds-sub"><h3>Sombras</h3><p>Sombras cálidas, siempre oscuras y difusas — nunca negras puras — para simular luz de taller.</p></div>
+    <div class="ds-strip-grid">
+      <div class="ds-strip">
+        <div class="ds-strip-preview ds-shadow-chip"><div class="ds-shadow-box" style="box-shadow:0 24px 50px -30px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(242,228,204,0.06);"></div></div>
+        <div class="ds-strip-meta"><span class="ds-strip-name">Panel resting shadow</span><span class="ds-strip-code">0 24px 50px -30px rgba(0,0,0,.7)</span></div>
+      </div>
+      <div class="ds-strip">
+        <div class="ds-strip-preview ds-shadow-chip"><div class="ds-shadow-box" style="box-shadow:0 0 0 3px rgba(201,161,92,0.14), 0 0 32px rgba(201,161,92,0.26), 0 24px 46px -22px rgba(0,0,0,0.6);"></div></div>
+        <div class="ds-strip-meta"><span class="ds-strip-name">Card hover glow</span><span class="ds-strip-code">0 0 0 3px rgba(201,161,92,.14), 0 0 32px rgba(201,161,92,.26)</span></div>
+      </div>
+      <div class="ds-strip">
+        <div class="ds-strip-preview ds-shadow-chip"><div class="ds-shadow-box" style="box-shadow:0 22px 44px -26px rgba(8,4,2,0.65), inset 0 1px 0 rgba(255,244,224,0.05);"></div></div>
+        <div class="ds-strip-meta"><span class="ds-strip-name">Testimonial / gallery shadow</span><span class="ds-strip-code">0 22px 44px -26px rgba(8,4,2,.65)</span></div>
+      </div>
+      <div class="ds-strip">
+        <div class="ds-strip-preview ds-shadow-chip"><div class="ds-shadow-box" style="box-shadow:0 36px 46px rgba(0,0,0,0.55); border-radius:50%; background:transparent;"></div></div>
+        <div class="ds-strip-meta"><span class="ds-strip-name">Floating object shadow (drop-shadow)</span><span class="ds-strip-code">filter: drop-shadow(0 36px 46px rgba(0,0,0,.55))</span></div>
+      </div>
+    </div>
+
+    <div class="ds-sub" id="radius"><h3>Radios de borde</h3><p>Sistema de tres escalones: circular para controles, 18–20px para tarjetas/paneles, 1px (casi recto) para el CTA sólido.</p></div>
+    <div class="ds-strip-grid">
+      <div class="ds-strip"><div class="ds-strip-preview" style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.16);"><div class="ds-radius-box" style="border-radius:1px;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">1px — botón sólido</span><span class="ds-strip-code">border-radius:1px</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.16);"><div class="ds-radius-box" style="border-radius:8px;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">8px — mini layout blocks</span><span class="ds-strip-code">border-radius:8px</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.16);"><div class="ds-radius-box" style="border-radius:18px;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">18px — tarjetas, paneles, imágenes</span><span class="ds-strip-code">border-radius:18px</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.16);"><div class="ds-radius-box" style="border-radius:20px;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">20px — panel editorial (materiales)</span><span class="ds-strip-code">border-radius:20px</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.16);"><div class="ds-radius-box" style="border-radius:50%;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">50% — círculo (avatares, flechas, dots)</span><span class="ds-strip-code">border-radius:50%</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.16);"><div class="ds-radius-box" style="border-radius:999px; width:90px;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">999px — pills (level, highlight)</span><span class="ds-strip-code">border-radius:999px</span></div></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 2. TYPOGRAPHY -->
+  <!-- ============================================================ -->
+  <section class="ds-section" id="type-families">
+    <div class="ds-section-num">Sección 02</div>
+    <h2>Librería tipográfica</h2>
+    <p class="ds-lede">Tres familias con roles fijos: serif para voz editorial/emocional, sans para cuerpo de texto, y mono para todo lo funcional (labels, precios de UI, botones, metadatos).</p>
+
+    <div class="ds-strip-grid">
+      <div class="ds-strip"><div class="ds-strip-preview" style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.16);"><span style="font-family:'Fraunces',serif; font-size:2rem; color:var(--cream);">Aa</span></div><div class="ds-strip-meta"><span class="ds-strip-name">Fraunces — display / editorial</span><span class="ds-strip-code">--serif: 'Fraunces', serif</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.16);"><span style="font-family:'Inter',sans-serif; font-weight:300; font-size:2rem; color:var(--cream);">Aa</span></div><div class="ds-strip-meta"><span class="ds-strip-name">Inter — cuerpo de texto</span><span class="ds-strip-code">--sans: 'Inter', sans-serif</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.16);"><span style="font-family:'Space Mono',monospace; font-size:2rem; color:var(--cream);">Aa</span></div><div class="ds-strip-meta"><span class="ds-strip-name">Space Mono — labels / UI</span><span class="ds-strip-code">--mono: 'Space Mono', monospace</span></div></div>
+    </div>
+  </section>
+
+  <section class="ds-section" id="type-headings" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Encabezados</h3><p>Todos comparten <code>font-family:var(--serif)</code>, peso 400 y <code>line-height:1.05</code>; sólo cambia el tamaño clamp.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block;">
+        <div class="ds-type-row">
+          <div class="ds-type-sample"><h1 style="font-size:clamp(3rem,6.6vw,5.6rem);">Lutería de <em style="font-style:italic;color:var(--brass-bright);font-weight:300;">Autor</em></h1></div>
+          <div class="ds-type-specs">H1 — Hero<br><b>size</b> clamp(3rem,6.6vw,5.6rem)<br><b>weight</b> 400 · <b>lh</b> 1.05<br><b>ls</b> -0.01em</div>
+        </div>
+        <div class="ds-type-row">
+          <div class="ds-type-sample"><h2 style="font-size:clamp(2.1rem,3.6vw,3.2rem);">Aprendé a construir <em style="font-style:italic;color:var(--brass-bright);">guitarras</em></h2></div>
+          <div class="ds-type-specs">H2 — Título de sección<br><b>size</b> clamp(2.1rem,3.6vw,3.2rem)<br><b>weight</b> 400 · <b>lh</b> 1.05</div>
+        </div>
+        <div class="ds-type-row">
+          <div class="ds-type-sample"><h3 style="font-size:1.22rem;">Construcción de Guitarra Eléctrica</h3></div>
+          <div class="ds-type-specs">H3 — Título de tarjeta<br><b>size</b> 1.22rem<br><b>weight</b> 400 · <b>lh</b> 1.3</div>
+        </div>
+        <div class="ds-type-row">
+          <div class="ds-type-sample"><h4 style="font-size:1.12rem; font-style:italic; font-weight:400;">Detalle de Herramienta</h4></div>
+          <div class="ds-type-specs">H4 — Título menor<br><b>size</b> 1.12rem<br><b>weight</b> 400 · <b>lh</b> 1.3</div>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">h1, h2, h3, h4</div><div class="ds-block-desc">Fraunces · color var(--cream) · letter-spacing -0.01em</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">h1,h2,h3,h4{
+  font-family:var(--serif);
+  font-weight:400;
+  line-height:1.05;
+  letter-spacing:-0.01em;
+  color:var(--cream);
+}
+&lt;h2&gt;Aprendé a construir &lt;em&gt;guitarras&lt;/em&gt;&lt;/h2&gt;</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="type-body" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Cuerpo, etiquetas y botones</h3><p>Los textos funcionales usan mono en mayúsculas con tracking amplio; el cuerpo usa Inter 300 con line-height 1.7.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block;">
+        <div class="ds-type-row">
+          <div class="ds-type-sample"><div class="eyebrow">Cursos disponibles</div></div>
+          <div class="ds-type-specs">Eyebrow<br><b>size</b> 0.72rem · <b>ls</b> 0.28em<br>mono · uppercase · brass</div>
+        </div>
+        <div class="ds-type-row">
+          <div class="ds-type-sample"><p style="max-width:440px;color:var(--cream-dim);font-size:1.08rem;line-height:1.7;font-weight:300;">Cada guitarra nace de una conversación entre la madera y las manos que la moldean.</p></div>
+          <div class="ds-type-specs">Párrafo (hero)<br><b>size</b> 1.08rem · <b>lh</b> 1.7<br>weight 300</div>
+        </div>
+        <div class="ds-type-row">
+          <div class="ds-type-sample"><span style="font-family:var(--mono);font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--brass);">Precio del curso</span></div>
+          <div class="ds-type-specs">Label pequeño<br><b>size</b> 0.62–0.68rem · <b>ls</b> 0.16em</div>
+        </div>
+        <div class="ds-type-row">
+          <div class="ds-type-sample"><span style="font-family:var(--mono);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;">Reservar tu lugar</span></div>
+          <div class="ds-type-specs">Tipografía de botón<br><b>size</b> 0.75–0.78rem · <b>ls</b> 0.12em</div>
+        </div>
+        <div class="ds-type-row">
+          <div class="ds-type-sample"><span style="font-size:0.78rem;color:var(--cream-muted);font-family:var(--mono);">*Respondemos dentro de 24 horas hábiles.</span></div>
+          <div class="ds-type-specs">Texto pequeño / nota<br><b>size</b> 0.78rem<br>mono · cream-muted</div>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.eyebrow, p, labels</div><div class="ds-block-desc">Ver reglas exactas por clase</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">.eyebrow{
+  font-family:var(--mono); font-size:0.72rem; letter-spacing:0.28em;
+  text-transform:uppercase; color:var(--brass);
+  display:flex; align-items:center; gap:0.6em;
+}
+.eyebrow::before{ content:''; width:24px; height:1px; background:var(--brass); }
+
+p{ line-height:var(--body-line-height); /* 1.7 */ }
+.hero p{ font-size:1.08rem; color:var(--cream-dim); font-weight:300; }</pre>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 3. BUTTONS -->
+  <!-- ============================================================ -->
+  <section class="ds-section" id="btn-solid">
+    <div class="ds-section-num">Sección 03</div>
+    <h2>Librería de botones</h2>
+    <p class="ds-lede">Dos formas base (sólido y de línea) más variantes circulares para carruseles y CTAs secundarios. Pasa el cursor sobre cada ejemplo — los estados hover son en vivo, del CSS real del sitio.</p>
+
+    <div class="ds-block">
+      <div class="ds-block-preview">
+        <a href="#" class="btn-solid" onclick="return false;">Reservar tu lugar</a>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.btn-solid</div><div class="ds-block-desc">CTA primario — fondo brass sólido, eleva y aclara en hover</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;a href="#" class="btn-solid"&gt;Reservar tu lugar&lt;/a&gt;
+
+.btn-solid{
+  background:var(--brass); color:var(--walnut-deep);
+  font-family:var(--mono); font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase;
+  padding:16px 30px; border-radius:1px;
+}
+.btn-solid:hover{ background:var(--brass-bright); transform:translateY(-2px); }</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="btn-line" style="border-top:none; padding-top:44px;">
+    <div class="ds-block">
+      <div class="ds-block-preview">
+        <a href="#" class="btn-line" onclick="return false;">Conocé el proceso <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#" class="nav-cta" onclick="return false;">Agendar visita</a>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.btn-line / .nav-cta</div><div class="ds-block-desc">CTA secundario subrayado, e invitación de nav con borde fino</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;a href="#" class="btn-line"&gt;Conocé el proceso &lt;svg&gt;...&lt;/svg&gt;&lt;/a&gt;
+
+.btn-line{
+  border-bottom:1px solid var(--brass-dim); padding-bottom:10px;
+  font-family:var(--mono); font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase;
+}
+.btn-line:hover{ gap:18px; border-color:var(--brass); color:var(--brass-bright); }
+.btn-line:hover svg{ transform:translateX(4px); }
+
+.nav-cta{ border:1px solid var(--brass-dim); padding:11px 22px; }
+.nav-cta:hover{ border-color:var(--brass); background:rgba(201,161,92,.08); }</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="btn-icon" style="border-top:none; padding-top:44px;">
+    <div class="ds-sub"><h3>Botones circulares (flechas / iconos)</h3><p>Mismo patrón visual reutilizado en 4 carruseles distintos: fondo translúcido en reposo, se rellena de brass al hover.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview">
+        <button class="tc-arrow" onclick="return false;" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button class="exproj-arrow" onclick="return false;" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg></button>
+        <button class="materials-nav-btn" onclick="return false;" aria-label="Siguiente madera"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg></button>
+        <div class="course-arrow" style="position:static;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg></div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.tc-arrow · .exproj-arrow · .materials-nav-btn · .course-arrow</div><div class="ds-block-desc">Todas comparten el mismo idle bg y hover glow (--arrow-bg-idle)</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;button class="tc-arrow" aria-label="Anterior"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/button&gt;
+
+.tc-arrow{
+  width:44px; height:44px; border-radius:50%;
+  background:var(--arrow-bg-idle);
+}
+.tc-arrow:hover{
+  border-color:var(--brass); background:var(--brass); color:var(--walnut-deep);
+  box-shadow:0 0 0 3px rgba(201,161,92,.14), 0 0 20px rgba(201,161,92,.35);
+}</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="btn-states" style="border-top:none; padding-top:44px;">
+    <div class="ds-sub"><h3>Estados</h3><p>Default, hover (interactivo arriba), active y disabled — este último sólo existe en las flechas de carrusel.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview">
+        <div style="text-align:center;"><button class="tc-arrow" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg></button><div class="ds-strip-code" style="margin-top:8px;">Default</div></div>
+        <div style="text-align:center;"><button class="tc-arrow" style="border-color:var(--brass);background:var(--brass);color:var(--walnut-deep);box-shadow:0 0 0 3px rgba(201,161,92,.14), 0 0 20px rgba(201,161,92,.35);" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg></button><div class="ds-strip-code" style="margin-top:8px;">Hover</div></div>
+        <div style="text-align:center;"><button class="tc-arrow" style="transform:scale(0.94);" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg></button><div class="ds-strip-code" style="margin-top:8px;">Active</div></div>
+        <div style="text-align:center;"><button class="tc-arrow" disabled onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg></button><div class="ds-strip-code" style="margin-top:8px;">Disabled</div></div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">[disabled] state</div><div class="ds-block-desc">Aplica a .tc-arrow y .exproj-arrow al llegar al extremo del carrusel</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">.tc-arrow[disabled]{ opacity:0.3; cursor:default; }
+.tc-arrow[disabled]:hover{ border-color:transparent; background:var(--arrow-bg-idle); box-shadow:none; }</pre>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 4. COMPONENTS -->
+  <!-- ============================================================ -->
+  <section class="ds-section" id="comp-nav">
+    <div class="ds-section-num">Sección 04</div>
+    <h2>Librería de componentes</h2>
+    <p class="ds-lede">Vista previa en vivo, propósito, estructura HTML y clases CSS para cada patrón repetido del sitio.</p>
+
+    <div class="ds-sub"><h3>Navegación</h3><p>Barra fija translúcida; cambia de fondo/padding al hacer scroll vía la clase <code>.scrolled</code>.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="padding:0; background:rgba(18,11,7,0.6);">
+        <nav class="nav scrolled" style="position:static; width:100%;">
+          <div class="brand">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="1"><circle cx="12" cy="12" r="9"/></svg>
+            <span>Trastes<small>LUTERÍA DE AUTOR</small></span>
+          </div>
+          <div class="nav-links">
+            <a href="#" onclick="return false;">La lutería</a>
+            <a href="#" onclick="return false;">Proceso</a>
+            <a href="#" onclick="return false;">Cursos</a>
+          </div>
+          <a href="#" class="nav-cta" onclick="return false;">Agendar visita</a>
+        </nav>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.nav / .brand / .nav-links / .nav-cta</div><div class="ds-block-desc">Fixed top, backdrop-blur al hacer scroll</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;nav class="nav scrolled"&gt;
+  &lt;div class="brand"&gt;&lt;svg&gt;...&lt;/svg&gt; Trastes&lt;small&gt;LUTERÍA DE AUTOR&lt;/small&gt;&lt;/div&gt;
+  &lt;div class="nav-links"&gt;&lt;a href="#"&gt;La lutería&lt;/a&gt;...&lt;/div&gt;
+  &lt;a href="#" class="nav-cta"&gt;Agendar visita&lt;/a&gt;
+&lt;/nav&gt;</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="comp-cards" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Tarjeta de curso (glass card)</h3><p>Componente más reutilizado del sitio: cursos en Home, "Para quién es" en course-detail, y base de las tarjetas del carrusel de docentes.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview">
+        <article class="course-card" style="max-width:300px;">
+          <div class="course-media"><div class="ds-photo" data-label="Foto de curso" style="position:absolute;inset:0;"></div><span class="course-level">Nivel intermedio</span></div>
+          <div class="course-body">
+            <h3>Construcción de Guitarra Eléctrica</h3>
+            <ul class="course-meta"><li>12 semanas</li><li>Taller propio</li></ul>
+            <p class="course-desc">Diseñá y construí tu propia guitarra eléctrica desde cero, guiado por luthiers profesionales.</p>
+            <div class="course-divider"></div>
+            <div class="course-price-row">
+              <div><span class="course-price-label">Inversión</span><span class="course-price">$980</span></div>
+              <div class="course-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg></div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.course-card</div><div class="ds-block-desc">Glass bg + blur, radius 18px, eleva -6px y brilla en hover</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;article class="course-card"&gt;
+  &lt;div class="course-media"&gt;
+    &lt;img src="..." alt="..."&gt;
+    &lt;span class="course-level"&gt;Nivel intermedio&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="course-body"&gt;
+    &lt;h3&gt;Construcción de Guitarra Eléctrica&lt;/h3&gt;
+    &lt;ul class="course-meta"&gt;&lt;li&gt;12 semanas&lt;/li&gt;&lt;/ul&gt;
+    &lt;p class="course-desc"&gt;...&lt;/p&gt;
+    &lt;div class="course-divider"&gt;&lt;/div&gt;
+    &lt;div class="course-price-row"&gt;
+      &lt;div&gt;&lt;span class="course-price-label"&gt;Inversión&lt;/span&gt;&lt;span class="course-price"&gt;$980&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="course-arrow"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</pre>
+    </div>
+
+    <div class="ds-block">
+      <div class="ds-block-preview">
+        <article class="tool-card" style="width:260px;">
+          <div class="tool-photo"><div class="ds-photo" data-label="Herramienta" style="position:absolute;inset:0;"></div></div>
+          <div class="tool-body">
+            <h4 class="tool-name">Sierra de banco</h4>
+            <p class="tool-desc">Cortes de precisión para tapas y aros, calibrada semanalmente.</p>
+            <span class="tool-highlight">Uso diario</span>
+          </div>
+        </article>
+        <div class="testi-card" style="max-width:280px;">
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-quote-mark">“</div>
+          <p class="testi-text">Aprendí más en 3 meses que en años de intentarlo solo.</p>
+          <div class="testi-foot"><div class="testi-avatar ds-photo" data-label=""></div><div><div class="testi-name">Marcos D.</div><div class="testi-role">Alumno 2025</div></div></div>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.tool-card · .testi-card</div><div class="ds-block-desc">Tarjeta de herramienta (course-detail) y tarjeta de testimonio (carrusel infinito)</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;article class="tool-card"&gt;
+  &lt;div class="tool-photo"&gt;&lt;img src="..." alt="..."&gt;&lt;/div&gt;
+  &lt;div class="tool-body"&gt;
+    &lt;h4 class="tool-name"&gt;Sierra de banco&lt;/h4&gt;
+    &lt;p class="tool-desc"&gt;...&lt;/p&gt;
+    &lt;span class="tool-highlight"&gt;Uso diario&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;div class="testi-card"&gt;
+  &lt;div class="testi-stars"&gt;★★★★★&lt;/div&gt;
+  &lt;div class="testi-quote-mark"&gt;“&lt;/div&gt;
+  &lt;p class="testi-text"&gt;...&lt;/p&gt;
+  &lt;div class="testi-foot"&gt;
+    &lt;img class="testi-avatar" src="..." alt=""&gt;
+    &lt;div&gt;&lt;div class="testi-name"&gt;Marcos D.&lt;/div&gt;&lt;div class="testi-role"&gt;Alumno 2025&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block;">
+        <div class="teachers" style="margin-top:0; grid-template-columns:repeat(2,1fr); max-width:640px;">
+          <article class="teacher-card active">
+            <div class="teacher-top">
+              <div class="teacher-avatar ds-photo" data-label=""></div>
+              <div><div class="teacher-name">Elena Ríos</div><div class="teacher-role">Maestra luthier</div></div>
+            </div>
+            <p class="teacher-bio">30 años restaurando y construyendo guitarras clásicas en Córdoba.</p>
+            <div class="teacher-plus"></div>
+          </article>
+          <article class="teacher-card">
+            <div class="teacher-top">
+              <div class="teacher-avatar ds-photo" data-label=""></div>
+              <div><div class="teacher-name">Bruno Sasso</div><div class="teacher-role">Luthier eléctrico</div></div>
+            </div>
+            <p class="teacher-bio">Especialista en pastillas y ensambles de guitarra eléctrica.</p>
+            <div class="teacher-plus"></div>
+          </article>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.teacher-card</div><div class="ds-block-desc">Grid de docentes; se expande en hover/active revelando la bio</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;article class="teacher-card"&gt;
+  &lt;div class="teacher-top"&gt;
+    &lt;img class="teacher-avatar" src="..." alt=""&gt;
+    &lt;div&gt;&lt;div class="teacher-name"&gt;Elena Ríos&lt;/div&gt;&lt;div class="teacher-role"&gt;Maestra luthier&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p class="teacher-bio"&gt;...&lt;/p&gt;
+  &lt;div class="teacher-plus"&gt;&lt;/div&gt;
+&lt;/article&gt;
+/* .active o :hover expande min-height y muestra .teacher-bio */</pre>
+    </div>
+
+    <div class="ds-sub"><h3>Panel editorial de materiales</h3><p>Tarjeta oscura con contorno bronce, siempre visible, usada para mostrar las propiedades de cada madera.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview">
+        <div class="materials-panel" style="max-width:360px;">
+          <div class="materials-panel-head"><span class="materials-name">Palo Santo</span></div>
+          <ul class="materials-specs">
+            <li><span class="spec-label">Sonido</span><span class="spec-value">Cálido, con graves profundos</span></li>
+            <li><span class="spec-label">Densidad</span><span class="spec-value">Alta</span></li>
+            <li><span class="spec-label">Estabilidad</span><span class="spec-value">Excelente</span></li>
+            <li><span class="spec-label">Origen</span><span class="spec-value">India, Brasil</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.materials-panel / .materials-specs</div><div class="ds-block-desc">4 filas fijas: SONIDO, DENSIDAD, ESTABILIDAD, ORIGEN</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;div class="materials-panel"&gt;
+  &lt;div class="materials-panel-head"&gt;&lt;span class="materials-name"&gt;Palo Santo&lt;/span&gt;&lt;/div&gt;
+  &lt;ul class="materials-specs"&gt;
+    &lt;li&gt;&lt;span class="spec-label"&gt;Sonido&lt;/span&gt;&lt;span class="spec-value"&gt;...&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="spec-label"&gt;Densidad&lt;/span&gt;&lt;span class="spec-value"&gt;...&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="spec-label"&gt;Estabilidad&lt;/span&gt;&lt;span class="spec-value"&gt;...&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="spec-label"&gt;Origen&lt;/span&gt;&lt;span class="spec-value"&gt;...&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+/* .is-fading agrega opacity:0 durante la transición entre maderas */</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="comp-carousel" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Carrusels</h3><p>Cuatro implementaciones distintas del patrón "flecha + pista + dots": docentes/galería/herramientas (drag), proyectos de ex-alumnos (windowed), maderas (thumbnails circulares) y testimonios (scroll infinito automático).</p></div>
+
+    <div class="ds-block">
+      <div class="ds-block-preview" style="gap:14px;">
+        <button class="tc-arrow" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <div style="display:flex; gap:18px; overflow:hidden;">
+          <div class="tc-photo" style="width:120px; flex-shrink:0;"><div class="ds-photo" data-label="" style="position:absolute;inset:0;"></div></div>
+          <div class="tc-photo" style="width:120px; flex-shrink:0;"><div class="ds-photo" data-label="" style="position:absolute;inset:0;"></div></div>
+        </div>
+        <button class="tc-arrow" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.tc-wrap / .tc-arrow / .tc-viewport / .tc-track / .tc-dots</div><div class="ds-block-desc">Estructura base reutilizada por docentes, galería y herramientas — sólo cambia la tarjeta interna</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;div class="tc-wrap"&gt;
+  &lt;button class="tc-arrow" data-tc-prev&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/button&gt;
+  &lt;div class="tc-viewport"&gt;
+    &lt;div class="tc-track"&gt;
+      &lt;article class="tc-card" data-tc-card&gt;...&lt;/article&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button class="tc-arrow" data-tc-next&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="tc-dots"&gt;&lt;span class="tc-dot active"&gt;&lt;/span&gt;...&lt;/div&gt;</pre>
+    </div>
+
+    <div class="ds-block">
+      <div class="ds-block-preview" style="gap:14px;">
+        <button class="exproj-arrow" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <div class="exproj-slide is-active" style="width:130px; height:170px;">
+          <div class="exproj-slide-glow"></div>
+          <div class="ds-photo" data-label="Guitarra" style="position:absolute;inset:15% 10%;border-radius:6px;"></div>
+        </div>
+        <button class="exproj-arrow" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.exproj-carousel / .exproj-slide.is-active</div><div class="ds-block-desc">Carrusel de proyectos: la guitarra activa se agranda 1.15x y recibe un glow cálido detrás</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;div class="exproj-slide is-active"&gt;
+  &lt;div class="exproj-slide-glow"&gt;&lt;/div&gt;
+  &lt;img class="exproj-slide-img" src="..." alt=""&gt;
+&lt;/div&gt;
+.exproj-slide.is-active .exproj-slide-img{ transform:scale(1.15); }</pre>
+    </div>
+
+    <div class="ds-block">
+      <div class="ds-block-preview" style="gap:14px;">
+        <div class="materials-thumb active"><div class="thumb-avatar ds-photo" data-label=""></div><span class="thumb-label">Palo Santo</span></div>
+        <div class="materials-thumb"><div class="thumb-avatar ds-photo" data-label=""></div><span class="thumb-label">Cedro</span></div>
+        <div class="materials-thumb"><div class="thumb-avatar ds-photo" data-label=""></div><span class="thumb-label">Ébano</span></div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.materials-thumb.active</div><div class="ds-block-desc">Avatar circular con borde brass + escala 1.08 en el estado activo</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;div class="materials-thumb active"&gt;
+  &lt;div class="thumb-avatar"&gt;&lt;img src="..." alt=""&gt;&lt;/div&gt;
+  &lt;span class="thumb-label"&gt;Palo Santo&lt;/span&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+    <div class="ds-block">
+      <div class="ds-block-preview" style="overflow:hidden;">
+        <div style="display:flex; gap:24px; animation:none;">
+          <div class="testi-card" style="width:240px; flex-shrink:0;"><div class="testi-stars">★★★★★</div><p class="testi-text" style="font-size:0.92rem;">Un taller que se siente familiar desde el primer día.</p></div>
+          <div class="testi-card" style="width:240px; flex-shrink:0;"><div class="testi-stars">★★★★☆</div><p class="testi-text" style="font-size:0.92rem;">Excelente relación entre teoría y trabajo manual.</p></div>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.testi-carousel / .testi-track</div><div class="ds-block-desc">Scroll infinito automático (56s linear), se pausa en hover</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">.testi-track{ animation:testiScroll 56s linear infinite; }
+.testi-carousel:hover .testi-track{ animation-play-state:paused; }</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="comp-tags" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Tags &amp; badges</h3><p>Dos pills reutilizadas para metadatos cortos: nivel de curso y destacado de herramienta.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview">
+        <span class="course-level" style="position:static;">Nivel avanzado</span>
+        <span class="tool-highlight" style="position:static; margin-top:0;">Uso diario</span>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.course-level · .tool-highlight</div><div class="ds-block-desc">Pill de borde fino, fondo translúcido, mono uppercase</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;span class="course-level"&gt;Nivel avanzado&lt;/span&gt;
+&lt;span class="tool-highlight"&gt;Uso diario&lt;/span&gt;
+
+.course-level{ border:1px solid rgba(201,161,92,.5); border-radius:999px; padding:5px 12px; }
+.tool-highlight{ background:rgba(201,161,92,.12); border:1px solid rgba(201,161,92,.35); border-radius:999px; }</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="comp-forms" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Formularios</h3><p>Inputs sin caja: sólo un borde inferior que se torna brass al enfocar.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block; max-width:400px;">
+        <div class="field"><label>Nombre</label><input type="text" placeholder="Tu nombre"></div>
+        <div class="field"><label>Mensaje</label><textarea placeholder="Contanos sobre tu proyecto"></textarea></div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.field / input / textarea</div><div class="ds-block-desc">Fondo transparente, borde inferior 1px, foco en brass</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;div class="field"&gt;
+  &lt;label&gt;Nombre&lt;/label&gt;
+  &lt;input type="text" placeholder="Tu nombre"&gt;
+&lt;/div&gt;
+
+.field input, .field textarea{
+  background:transparent; border:none; border-bottom:1px solid rgba(242,228,204,.22);
+}
+.field input:focus{ border-color:var(--brass); outline:none; }</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="comp-accordion" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Acordeones</h3><p>FAQ con textura de madera de fondo; el proceso horizontal (arriba) usa flex-grow para expandirse en vez de max-height.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block;">
+        <div class="faq-item open" style="background-image:linear-gradient(155deg, rgba(15,9,5,0.82) 0%, rgba(35,20,10,0.68) 45%, rgba(20,12,7,0.8) 100%);">
+          <div class="faq-question"><span>¿Necesito experiencia previa?</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg></div></div>
+          <div class="faq-answer" style="max-height:120px; opacity:1;"><p>No, tenemos cursos diseñados especialmente para principiantes.</p></div>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.faq-item.open</div><div class="ds-block-desc">Fondo de textura de madera + overlay oscuro, ícono rota 135°</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;div class="faq-item open"&gt;
+  &lt;button class="faq-question"&gt;&lt;span&gt;...&lt;/span&gt;&lt;div class="faq-icon"&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/div&gt;&lt;/button&gt;
+  &lt;div class="faq-answer"&gt;&lt;p&gt;...&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+.faq-item.open .faq-answer{ max-height:240px; opacity:1; }
+.faq-item.open .faq-icon{ transform:rotate(135deg); }</pre>
+    </div>
+
+    <div class="ds-block">
+      <div class="ds-block-preview" style="height:200px;">
+        <div class="process-panel active" style="flex-grow:3; height:100%; position:relative; background:linear-gradient(160deg,#3a2616,#7a5c3e);">
+          <div class="process-overlay"></div>
+          <div class="process-expanded" style="position:static; opacity:1; transform:none; padding:20px; width:auto;">
+            <div class="process-eyebrow-sm">01 — Diseño</div>
+            <div class="process-heading" style="font-size:1.3rem;">Bocetado &amp; medidas</div>
+          </div>
+        </div>
+        <div class="process-panel" style="flex-grow:1; height:100%; position:relative; background:linear-gradient(160deg,#241710,#4a3023);">
+          <div class="process-title" style="position:static; writing-mode:vertical-rl; transform:rotate(180deg); margin:auto;">Moldeado</div>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.process-panel.active</div><div class="ds-block-desc">Acordeón horizontal: flex-grow anima el ancho, el contenido es una capa fija superpuesta</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;div class="process-rail"&gt;
+  &lt;div class="process-panel active"&gt;
+    &lt;div class="process-media"&gt;&lt;img src="..." alt=""&gt;&lt;/div&gt;
+    &lt;div class="process-overlay"&gt;&lt;/div&gt;
+    &lt;div class="process-expanded"&gt;
+      &lt;div class="process-eyebrow-sm"&gt;01 — Diseño&lt;/div&gt;
+      &lt;div class="process-heading"&gt;Bocetado &amp; medidas&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;
+.process-panel.active{ flex-grow:6.4; }</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="comp-banner" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Banner editorial (Statement)</h3><p>Único quiebre deliberado del ritmo de secciones a pantalla completa: una franja corta a ancho completo con foto y overlay de viñeta.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="min-height:180px; position:relative; background:linear-gradient(155deg,#3a2616,#1b120d);">
+        <div style="position:relative; z-index:2; text-align:center; padding:20px;">
+          <p class="statement-heading" style="font-size:1.6rem;">Cada instrumento lleva <em>la marca de su artesano</em>.</p>
+          <span class="statement-sign">— Taller Trastes</span>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.statement / .statement-heading / .statement-sign</div><div class="ds-block-desc">Foto de fondo + overlay 55% + glow radial cálido en el centro</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;section class="statement"&gt;
+  &lt;div class="statement-inner"&gt;
+    &lt;p class="statement-heading"&gt;Cada instrumento lleva &lt;em&gt;la marca de su artesano&lt;/em&gt;.&lt;/p&gt;
+    &lt;span class="statement-sign"&gt;— Taller Trastes&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre>
+    </div>
+
+    <div class="ds-sub"><h3>Stats del taller</h3><p>Cifras clave separadas por una línea vertical fina.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview">
+        <div class="workshop-stats" style="margin-top:0;">
+          <div class="stat"><b>18</b><span>Años de oficio</span></div>
+          <div class="stat"><b>240+</b><span>Guitarras construidas</span></div>
+          <div class="stat"><b>96%</b><span>Alumnos recomiendan</span></div>
+        </div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.workshop-stats .stat</div><div class="ds-block-desc">Número en serif brass-bright, label en mono uppercase</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;div class="workshop-stats"&gt;
+  &lt;div class="stat"&gt;&lt;b&gt;18&lt;/b&gt;&lt;span&gt;Años de oficio&lt;/span&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;</pre>
+    </div>
+  </section>
+
+  <section class="ds-section" id="comp-footer" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Footer</h3><p>Grid de 4 columnas (marca + 3 listas de enlaces) con línea de copyright inferior.</p></div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block; padding:32px;">
+        <div class="footer-grid" style="max-width:900px;">
+          <div class="footer-brand">Trastes<p>Lutería de autor, hecha a mano en cada detalle.</p></div>
+          <div class="footer-col"><h4>Sitio</h4><a href="#" onclick="return false;">Cursos</a><a href="#" onclick="return false;">Proceso</a></div>
+          <div class="footer-col"><h4>Contacto</h4><a href="#" onclick="return false;">Escribinos</a></div>
+        </div>
+        <div class="footer-bottom" style="margin-top:32px;"><span>© 2026 Trastes</span></div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.footer-grid / .footer-col / .footer-bottom</div><div class="ds-block-desc">1.4fr + 1fr×3, columnas de enlaces con hover a brass</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">&lt;div class="footer-grid"&gt;
+  &lt;div class="footer-brand"&gt;Trastes&lt;p&gt;...&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="footer-col"&gt;&lt;h4&gt;Sitio&lt;/h4&gt;&lt;a href="#"&gt;Cursos&lt;/a&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;
+&lt;div class="footer-bottom"&gt;&lt;span&gt;© 2026 Trastes&lt;/span&gt;&lt;/div&gt;</pre>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 5. IMAGE SYSTEM -->
+  <!-- ============================================================ -->
+  <section class="ds-section" id="img-ratios">
+    <div class="ds-section-num">Sección 05</div>
+    <h2>Sistema de imágenes</h2>
+    <p class="ds-lede">Cada imagen del sitio pasa por el mismo filtro de grading global (<code>saturate(0.94) sepia(0.06) brightness(0.98)</code>) y usa <code>object-fit</code> intencional según su rol.</p>
+
+    <div class="ds-strip-grid">
+      <div class="ds-strip"><div class="ds-strip-preview" style="position:relative;"><div class="ds-photo" data-label="course-media · 200px alto, cover" style="position:absolute;inset:0;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">.course-media</span><span class="ds-strip-code">height:200px; object-fit:cover</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="position:relative;"><div class="ds-photo" data-label="tc-photo · 20/23, cover" style="position:absolute;inset:0;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">.tc-photo (docentes)</span><span class="ds-strip-code">aspect-ratio:20/23; object-fit:cover</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="position:relative;"><div class="ds-photo" data-label="gallery-photo · 4/3, cover" style="position:absolute;inset:0;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">.gallery-photo</span><span class="ds-strip-code">aspect-ratio:4/3; object-fit:cover</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="position:relative; background:linear-gradient(155deg, rgba(42,29,20,.92), rgba(18,11,7,.96));"><div class="ds-photo" data-label="tool-photo · 4/3, contain + padding" style="position:absolute;inset:14px; background:linear-gradient(155deg,#7a5c3e,#3a2616);"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">.tool-photo</span><span class="ds-strip-code">aspect-ratio:4/3; object-fit:contain; padding:14px</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="position:relative; display:flex; align-items:flex-end; justify-content:center;"><div class="ds-photo" data-label="materials-image · contain, flotante" style="position:relative;width:60%;height:80%;filter:drop-shadow(0 20px 20px rgba(0,0,0,.5));"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">.materials-image</span><span class="ds-strip-code">object-fit:contain; filter:drop-shadow(...)</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="position:relative;"><div class="ds-photo" data-label="thumb-avatar · círculo 73px" style="position:absolute;inset:20%;border-radius:50%;"></div></div><div class="ds-strip-meta"><span class="ds-strip-name">.thumb-avatar / .teacher-avatar</span><span class="ds-strip-code">border-radius:50%; object-fit:cover</span></div></div>
+    </div>
+
+    <div class="ds-sub"><h3>Overlays sobre foto</h3><p>Todas las imágenes de fondo grande reciben un degradado oscuro para garantizar contraste del texto encima.</p></div>
+    <div class="ds-strip-grid">
+      <div class="ds-strip"><div class="ds-strip-preview" style="background:linear-gradient(180deg, rgba(18,11,7,0) 45%, rgba(18,11,7,0.9) 100%), linear-gradient(155deg,#7a5c3e,#3a2616);"></div><div class="ds-strip-meta"><span class="ds-strip-name">Course media overlay</span><span class="ds-strip-code">linear-gradient(180deg, transparent 45%, rgba(18,11,7,.9) 100%)</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="background:linear-gradient(90deg, rgba(18,11,7,0.86) 0%, rgba(18,11,7,0.35) 70%), linear-gradient(155deg,#93673f,#241710);"></div><div class="ds-strip-meta"><span class="ds-strip-name">Hero overlay</span><span class="ds-strip-code">linear-gradient(90deg, rgba(18,11,7,.86) 0%, rgba(18,11,7,.35) 70%)</span></div></div>
+      <div class="ds-strip"><div class="ds-strip-preview" style="background:rgba(27,18,13,0.55), linear-gradient(155deg,#93673f,#241710); background-color:rgba(27,18,13,0.75);"></div><div class="ds-strip-meta"><span class="ds-strip-name">Statement overlay</span><span class="ds-strip-code">rgba(27,18,13,.55) + vignette radial</span></div></div>
+    </div>
+  </section>
+
+  <section class="ds-section" id="img-textures" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Texturas de madera (generadas por CSS)</h3><p>10 clases <code>.tex-*</code> usadas como respaldo/placeholder de foto real para cada especie o paso del proceso, generadas con gradientes repetidos — no son imágenes.</p></div>
+    <div class="ds-swatch-grid">
+      <div class="ds-swatch"><div class="ds-swatch-color tex-cedar"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Cedro</span><span class="ds-swatch-var">.tex-cedar</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color tex-nogal"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Nogal</span><span class="ds-swatch-var">.tex-nogal</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color tex-caoba"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Caoba</span><span class="ds-swatch-var">.tex-caoba</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color tex-ebano"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Ébano</span><span class="ds-swatch-var">.tex-ebano</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color tex-arce"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Arce</span><span class="ds-swatch-var">.tex-arce</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color tex-palosanto"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Palo Santo</span><span class="ds-swatch-var">.tex-palosanto</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color tex-diseno"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Diseño (proceso)</span><span class="ds-swatch-var">.tex-diseno</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color tex-moldeado"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Moldeado (proceso)</span><span class="ds-swatch-var">.tex-moldeado</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color tex-ensamblaje"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Ensamblaje (proceso)</span><span class="ds-swatch-var">.tex-ensamblaje</span></div></div>
+      <div class="ds-swatch"><div class="ds-swatch-color tex-calibracion"></div><div class="ds-swatch-meta"><span class="ds-swatch-name">Calibración (proceso)</span><span class="ds-swatch-var">.tex-calibracion</span></div></div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 6. LAYOUT SYSTEM -->
+  <!-- ============================================================ -->
+  <section class="ds-section" id="layout-container">
+    <div class="ds-section-num">Sección 06</div>
+    <h2>Sistema de layout</h2>
+    <p class="ds-lede">Un contenedor máximo, padding de sección responsivo por viewport, y grillas específicas por sección.</p>
+
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block;">
+        <div class="ds-layout-demo" style="grid-template-columns:1fr;"><div>.container — max-width:1760px, centrado</div></div>
+        <div class="ds-layout-demo" style="grid-template-columns:1fr; margin-top:10px;"><div>.section-pad — padding: min(9vw,112px) 6vw</div></div>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.container / .section-pad</div><div class="ds-block-desc">Envoltura estándar de cada sección de página</div></div>
+        <button class="ds-code-toggle" onclick="dsToggle(this)">Ver código</button>
+      </div>
+      <pre class="ds-code">.container{ max-width:1760px; margin:0 auto; }
+.section-pad{ padding:min(9vw,112px) 6vw; }
+
+&lt;section class="courses section-pad"&gt;
+  &lt;div class="container"&gt;...&lt;/div&gt;
+&lt;/section&gt;</pre>
+    </div>
+
+    <div class="ds-sub"><h3>Grillas por sección</h3></div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block;">
+        <div class="ds-layout-demo" style="grid-template-columns:repeat(4,1fr);"><div>1</div><div>2</div><div>3</div><div>4</div></div>
+        <p class="ds-strip-code" style="margin-top:8px;">.course-grid — repeat(4,1fr), gap:24px → 2 col en tablet, 1 en mobile</p>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.course-grid</div><div class="ds-block-desc">Home — 4 tarjetas de curso</div></div>
+      </div>
+    </div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block;">
+        <div class="ds-layout-demo" style="grid-template-columns:1fr 1.4fr 1fr;"><div>Texto</div><div>Madera</div><div>Panel</div></div>
+        <p class="ds-strip-code" style="margin-top:8px;">.materials-grid — 1fr 1.4fr 1fr → apila a 1 columna en tablet</p>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.materials-grid</div><div class="ds-block-desc">Configurador de maderas — 3 columnas</div></div>
+      </div>
+    </div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block;">
+        <div class="ds-layout-demo" style="grid-template-columns:1.4fr 1fr 1fr 1fr;"><div>Marca</div><div>Col 1</div><div>Col 2</div><div>Col 3</div></div>
+        <p class="ds-strip-code" style="margin-top:8px;">.footer-grid — 1.4fr 1fr 1fr 1fr → 2 col en tablet, 1 en mobile</p>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.footer-grid</div><div class="ds-block-desc">Footer — marca + 3 columnas de enlaces</div></div>
+      </div>
+    </div>
+    <div class="ds-block">
+      <div class="ds-block-preview" style="display:block;">
+        <div class="ds-layout-demo" style="grid-template-columns:1.4fr 0.6fr;"><div>Foto grande</div><div>Texto + stats</div></div>
+        <p class="ds-strip-code" style="margin-top:8px;">.workshop-top — 1.4fr 0.6fr → 1 columna en tablet</p>
+      </div>
+      <div class="ds-block-meta">
+        <div><div class="ds-block-name">.workshop-top</div><div class="ds-block-desc">Sección Taller</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section" id="layout-spacing" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Ritmo vertical (variables de espaciado)</h3><p>Un único sistema de distancias controla título→párrafo→CTA en todas las secciones, escalando junto en cada breakpoint.</p></div>
+    <table class="ds-table">
+      <thead><tr><th>Variable</th><th>Valor (desktop)</th><th>Uso</th></tr></thead>
+      <tbody>
+        <tr><td>--space-title-top</td><td>18px</td><td>Margen sobre el título de sección</td></tr>
+        <tr><td>--space-title-body</td><td>22px</td><td>Título → párrafo</td></tr>
+        <tr><td>--space-body-cta</td><td>26px</td><td>Párrafo → botón CTA</td></tr>
+        <tr><td>--space-section-head</td><td>32px</td><td>Bloque de título → contenido (grid/cards)</td></tr>
+        <tr><td>--space-cards-next</td><td>44px</td><td>Grid de tarjetas → lo que sigue</td></tr>
+        <tr><td>--body-max-width</td><td>660px</td><td>Ancho máximo de párrafo de una columna</td></tr>
+        <tr><td>--body-line-height</td><td>1.7</td><td>Interlineado compartido de párrafos</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="ds-section" id="layout-breakpoints" style="border-top:none; padding-top:54px;">
+    <div class="ds-sub"><h3>Breakpoints</h3><p>Dos quiebres cubren todo el sitio: tablet y mobile.</p></div>
+    <table class="ds-table">
+      <thead><tr><th>Breakpoint</th><th>Cambios principales</th></tr></thead>
+      <tbody>
+        <tr><td>max-width:1080px</td><td>Cursos a 2 columnas, docentes a 1 columna, footer a 2 columnas, ritmo de espaciado reducido ~10%</td></tr>
+        <tr><td>max-width:900px</td><td>Panel de materiales a 1 columna, tarjetas de herramientas más angostas</td></tr>
+        <tr><td>max-width:720px</td><td>Nav colapsa a menú hamburguesa, cursos a 1 columna, proceso se apila vertical, todas las grillas a 1 columna, ritmo de espaciado reducido ~22%</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<a href="#colors" class="ds-top-link" aria-label="Volver arriba"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+
+<script>
+  function dsToggle(btn){
+    var pre = btn.closest('.ds-block').querySelector('.ds-code');
+    if(!pre) return;
+    pre.classList.toggle('is-open');
+    btn.textContent = pre.classList.contains('is-open') ? 'Ocultar código' : 'Ver código';
+  }
+</script>
+
+</body>
+</html>
